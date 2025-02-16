@@ -1,0 +1,313 @@
+/* General Styles */
+#prescriptionExplainer {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #212121;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #757575;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 25px;
+}
+
+/* Dropzone Styles */
+#prescriptionExplainer .dropzone {
+    border: 2px dashed #448e94;
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #448e94;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+#prescriptionExplainer .dropzone:hover,
+#prescriptionExplainer .dropzone.active {
+    background-color: rgba(68, 142, 148, 0.2);
+    font-weight: bold;
+    border-color: #2a98a1;
+}
+
+
+#prescriptionExplainer .dropzone p {
+    margin: 0;
+}
+
+/* Uploaded Files Section */
+#prescriptionExplainer .uploaded-files {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+#prescriptionExplainer .file-preview {
+
+    position: relative;
+    border: 1px solid #448e94;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 1;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#prescriptionExplainer .file-preview:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#prescriptionExplainer .file-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#prescriptionExplainer .pdf-preview {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    color: #448e94;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#prescriptionExplainer .remove-file {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.2s ease;
+    z-index: 2;
+}
+
+#prescriptionExplainer .remove-file:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#prescriptionExplainer .file-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #2C3E50;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-top: 1px solid rgba(68, 142, 148, 0.2);
+    backdrop-filter: blur(4px);
+}
+
+/* Button Styles */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.primary-btn {
+    background-color: rgb(223, 137, 52);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: rgb(214, 111, 8);
+}
+
+.primary-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.search-btn {
+    background-color: #4BB6B0;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover:not(:disabled) {
+    background-color: rgba(75, 182, 176, 0.9);
+}
+
+
+/* Prescription Details Section */
+.prescription-details {
+    margin-top: 30px;
+    text-align: left;
+    background-color: #F5E6D3;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.prescription-details h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #212121;
+    margin-bottom: 15px;
+}
+
+.prescription-details p {
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 10px;
+}
+
+.prescription-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.prescription-details ul li {
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #prescriptionExplainer {
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    #prescriptionExplainer .dropzone {
+        padding: 30px;
+        font-size: 14px;
+    }
+
+    .uploaded-files {
+        padding: 10px;
+    }
+
+
+    .file-item {
+        padding: 6px 8px;
+    }
+
+    .file-name {
+        font-size: 12px;
+    }
+
+    .file-size {
+        font-size: 10px;
+    }
+
+    .primary-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .prescription-details {
+        padding: 15px;
+    }
+
+    .prescription-details h3 {
+        font-size: 20px;
+    }
+
+    .prescription-details p,
+    .prescription-details ul li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #prescriptionExplainer {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    #prescriptionExplainer .dropzone {
+        padding: 20px;
+    }
+
+    .uploaded-files {
+        padding: 8px;
+    }
+
+    .file-item {
+        padding: 4px 6px;
+    }
+
+    .file-name {
+        font-size: 10px;
+    }
+
+    .file-size {
+        font-size: 8px;
+    }
+
+    .prescription-details {
+        padding: 10px;
+    }
+
+    .prescription-details h3 {
+        font-size: 18px;
+    }
+
+    .prescription-details p,
+    .prescription-details ul li {
+        font-size: 12px;
+    }
+}
